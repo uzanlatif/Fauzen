@@ -1,0 +1,9 @@
+use tilted logo on reactbits
+
+bawah ourclient adalah gambar -> png 
+
+carousel with minimum 4/5 items -> mendatar seperti rolling galerry tapi datar
+
+case study 
+sebelah kiri iku carousel vertical -> tengah icon -> kanan carousel biasa
+
