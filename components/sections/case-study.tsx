@@ -52,10 +52,9 @@ const caseStudyItems = [
 
 export function CaseStudy() {
   const [selectedCategory, setSelectedCategory] = useState('Highlights');
-  console.log(selectedCategory)
   return (
     <section className="py-24">
-      <Card   className="max-w-7xl p-4 mx-auto px-4 sm:px-6 lg:px-8 justify-items-center w-[fit-content]">
+      <Card   className="max-w-7xl p-4 mx-auto px-4 sm:px-6 lg:px-8 justify-items-center w-[fit-content] bg-secondary">
         <div>
           <div className="flex items-left  mb-6">
             <h2 className="text-3xl text-left font-bold">Case Study</h2>

@@ -162,7 +162,7 @@ export default function Carousel({
   return (
     <div
       ref={containerRef}
-      className={`carousel-container ${round ? 'round' : ''}`}
+      className={`carousel-container bg-primary ${round ? 'round' : ''}`}
       style={{
         width: `${baseWidth}px`,
         ...(round && { height: `${baseWidth}px`, borderRadius: '50%' }),
@@ -213,7 +213,7 @@ export default function Carousel({
                 {/* <span className="carousel-icon-container">{item.icon}</span> */}
               </div>
               <div className="carousel-item-content">
-                <div className="carousel-item-title">{item.title}</div>
+                <div className="carousel-item-title text-secondary">{item.title}</div>
                 {/* <p className="carousel-item-description">{item.description}</p> */}
               </div>
             </motion.div>

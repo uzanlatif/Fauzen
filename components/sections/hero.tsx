@@ -27,11 +27,10 @@ export function Hero() {
           </div>
 
           <p
-           className='drop-shadow-md break-words mt-16'
+           className='drop-shadow-md break-words mt-16 text-secondary'
             style={{
               fontWeight: 700,
               fontSize: '72px',
-              WebkitTextFillColor: 'white',
             }}
           >
             {"Crafting Digital ".toUpperCase()}
