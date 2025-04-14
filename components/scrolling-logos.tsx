@@ -55,7 +55,7 @@ export function ScrollingLogos() {
         {[...Array(16)].map((_, i) => (
           <Image
             key={i}
-            src="/placeholder.svg?height=30&width=100"
+            src="/Images/client/shell.png"
             alt="Amazon"
             width={100}
             height={30}
