@@ -8,8 +8,6 @@ import { Service } from "@/components/section/service";
 import { CTA } from "@/components/section/cta";
 import { Footer } from "@/components/section/footer";
 import { Mission } from "@/components/section/mission";
-import { Service2 } from "@/components/section/new_service";
-import { HoverService } from "@/components/section/hover_service";
 
 export default function Home() {
   return (
@@ -22,8 +20,6 @@ export default function Home() {
       <Case />
       <Process />
       <Service />
-      <Service2/>
-      <HoverService/>
       <CTA />
       <Footer />
     </main>

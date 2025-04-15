@@ -2,31 +2,49 @@ import Link from "next/link";
 
 export function Hero() {
   return (
-    <section className="max-w-7xl mx-auto px-8 md:px-16 py-16 relative">
-      <div className="relative max-w-3xl mx-auto">
-        <div className="border border-transparent bg-gradient-to-br from-blue-400 via-purple-500 to-pink-500 p-[1px] rounded-xl">
-          <div className="bg-black rounded-xl p-12">
-            <h1 className="text-4xl md:text-5xl font-bold mb-4 text-center">
-              Seeing Through the Noise
-              <br />
-              Clarity isn't found - it's crafted
-            </h1>
+    <section
+      className="max-w-7xl mx-auto px-8 md:px-16 py-16 relative transition-all"
+      style={{
+        backgroundImage: 'url("/images/pattern.jpeg")',
+        backgroundSize: "cover",
+        backgroundPosition: "center",
+      }}
+    >
+      {/* Overlay untuk background image */}
+      <div
+        className="absolute inset-0 bg-black opacity-80"
+        style={{ zIndex: -1 }} // Overlay berada di belakang konten hero
+      ></div>
 
-            <p className="text-center text-gray-300 mb-8 max-w-2xl mx-auto">
-              We help brands focus, zoom in on what matters, and cut through the
-              clutter of a crowded digital world.
-            </p>
+      {/* Menambahkan gambar dan tombol */}
+      <div className="relative z-10 text-center">
+        <img
+          src="/Images/Frame_Hero.png"
+          alt="Hero Gambar"
+          className="mx-auto"
+          style={{
+            width: "60%",
+            maxWidth: "800px", // Menetapkan lebar maksimum gambar
+          }}
+        />
 
-            <div className="flex justify-center">
-              <Link
-                href="#get-started"
-                className="bg-transparent border border-blue-400 text-white rounded-full px-6 py-2 hover:bg-blue-900/20 transition"
-              >
-                Get Started
-              </Link>
-            </div>
-          </div>
-        </div>
+        {/* Tombol Get Started */}
+        <Link
+          href="#get-started"
+          className="mt-4 inline-block px-6 py-3 text-white font-semibold rounded-full transform transition duration-300 hover:scale-105"
+          style={{
+            position: "absolute",
+            bottom: "40px", // Menyesuaikan posisi tombol
+            left: "50%",
+            transform: "translateX(-50%)",
+            background: "none",
+            border: "2px solid transparent",
+            borderImage: "linear-gradient(to right, #3b82f6, #9333ea) 1", // Gradient border
+            borderRadius: "30px", // Rounded border
+          }}
+        >
+          Get Started
+        </Link>
       </div>
     </section>
   );

@@ -2,19 +2,22 @@ import Link from "next/link";
 
 export function Footer() {
   return (
-    <footer className="bg-[#0a1525] py-16">
+    <footer className="bg-[#0a1525] py-12">
       <div className="max-w-7xl mx-auto px-8 md:px-16">
         <div className="grid md:grid-cols-4 gap-8">
+          {/* Section 1: Monocle Agency */}
           <div>
-            <h3 className="text-xl font-bold mb-6">Monocle Agency</h3>
+            <h3 className="text-xl font-bold text-white mb-4">Monocle Agency</h3>
             <p className="text-gray-400 text-sm">
               1234 Market Street, Suite 500
               <br />
               San Francisco, CA 94103 US
             </p>
           </div>
+
+          {/* Section 2: About Us */}
           <div>
-            <h4 className="font-semibold mb-4">About Us</h4>
+            <h4 className="text-lg font-semibold text-white mb-4">About Us</h4>
             <ul className="space-y-2 text-gray-400">
               <li>
                 <Link href="#" className="hover:text-white">
@@ -33,8 +36,10 @@ export function Footer() {
               </li>
             </ul>
           </div>
+
+          {/* Section 3: Our Services */}
           <div>
-            <h4 className="font-semibold mb-4">Our Services</h4>
+            <h4 className="text-lg font-semibold text-white mb-4">Our Services</h4>
             <ul className="space-y-2 text-gray-400">
               <li>
                 <Link href="#" className="hover:text-white">
@@ -53,8 +58,10 @@ export function Footer() {
               </li>
             </ul>
           </div>
+
+          {/* Section 4: Contact */}
           <div>
-            <h4 className="font-semibold mb-4">Contact</h4>
+            <h4 className="text-lg font-semibold text-white mb-4">Contact</h4>
             <ul className="space-y-2 text-gray-400">
               <li className="flex items-center">
                 <svg
@@ -89,11 +96,13 @@ export function Footer() {
                   <rect width="20" height="16" x="2" y="4" rx="2"></rect>
                   <path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"></path>
                 </svg>
-                contact@fabco.com
+                hello@monocleagency.co.id
               </li>
             </ul>
           </div>
         </div>
+
+        {/* Footer Bottom */}
         <div className="border-t border-gray-800 mt-12 pt-8 text-center text-gray-500 text-sm">
           2025 © Monocle Digital Agency
         </div>

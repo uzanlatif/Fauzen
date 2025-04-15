@@ -5,10 +5,10 @@ export function About() {
       <div className="max-w-7xl mx-auto px-8 md:px-16">
         <div className="grid md:grid-cols-2 gap-12">
           <div className="relative">
-            <div className="bg-gradient-to-br from-blue-400 to-blue-600 rounded-xl p-[1px]">
-              <div className="bg-[#0a1525] rounded-xl overflow-hidden">
+            <div className="">
+              <div className="">
                 <Image
-                  src="/images/people.jpg"
+                  src="/images/spiderman.png"
                   alt="Team"
                   width={600}
                   height={400}
@@ -18,9 +18,10 @@ export function About() {
             </div>
           </div>
           <div className="flex flex-col justify-center">
-            <div className="bg-blue-500 text-white text-xs font-semibold px-3 py-1 rounded-full w-fit mb-4">
+            <div className="bg-gradient-to-r from-blue-500 to-purple-600 text-white text-xs font-semibold px-4 py-1.5 rounded-full w-fit">
               ABOUT US
             </div>
+            <br /><br />
             <h2 className="text-3xl md:text-4xl font-bold mb-6">
               Driven by Purpose, Built for Impact
             </h2>

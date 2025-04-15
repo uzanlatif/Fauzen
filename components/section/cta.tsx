@@ -5,39 +5,41 @@ export function CTA() {
   return (
     <section className="py-24 bg-black">
       <div className="max-w-7xl mx-auto px-8 md:px-16">
-        <div className="bg-gradient-to-br from-gray-900 to-black rounded-xl p-12 relative overflow-hidden">
-          <div className="max-w-xl">
-            <h2 className="text-3xl md:text-4xl font-bold mb-6">
-              Ready to Grow Your
-              <br />
-              Brand Online?
-            </h2>
-            <Link
-              href="#contact"
-              className="bg-transparent border border-blue-400 text-white rounded-full px-6 py-2 inline-block hover:bg-blue-900/20 transition"
-            >
-              Let's Talk Strategy
-            </Link>
-          </div>
-          <div className="absolute right-12 top-1/2 -translate-y-1/2">
-            <div className="relative">
-              <svg
-                width="400"
-                height="400"
-                viewBox="0 0 400 400"
-                fill="none"
-                xmlns="http://www.w3.org/2000/svg"
-                className="text-blue-500"
-              ></svg>
-              <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2">
-                <Image
-                  src="/images/ion_rocket.png"
-                  alt="Profile"
-                  width={400}
-                  height={400}
-                  className="rounded-full"
-                />
-              </div>
+        {/* Set background image and adjust its size */}
+        <div
+          className="relative bg-cover bg-center rounded-lg" // Add rounded corners to the background
+          style={{
+            backgroundImage: "url('/images/pattern.jpeg')",
+            backgroundSize: '250%', // Memperbesar background menjadi lebih luas
+            backgroundPosition: 'top', // Set the background position to 'top'
+            padding: '5rem 0', // Menambah padding agar background lebih lebar
+          }}
+        >
+          <div className="max-w-2xl mx-auto relative z-10 text-left flex items-center justify-between ml-40">
+            {/* Text section with padding-left */}
+            <div className="text-white pl-8"> {/* Add padding-left here */}
+              <h2 className="text-3xl md:text-4xl font-bold mb-6">
+                Ready to Grow Your
+                <br />
+                Brand Online?
+              </h2>
+              <Link
+                href="#contact"
+                className="bg-transparent border border-blue-400 text-white rounded-full px-6 py-2 inline-block hover:bg-blue-900/20 transition"
+              >
+                Let's Talk Strategy
+              </Link>
+            </div>
+            
+            {/* Image section with margin-left auto to push it to the right */}
+            <div className="flex-shrink-0 ml-auto">
+              <Image
+                src="/images/ion_rocket.png" // Ganti dengan path gambar yang diinginkan
+                alt="Rocket Image"
+                width={150}
+                height={150}
+                className="rounded-lg shadow-lg"
+              />
             </div>
           </div>
         </div>

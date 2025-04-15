@@ -1,10 +1,12 @@
 export function Mission() {
   return (
-    <section id="services" className="py-24 bg-black">
+    <section id="mission" className="py-24 bg-black">
       <div className="max-w-7xl mx-auto px-8 md:px-16 text-center">
-        <div className="bg-blue-500 text-white text-xs font-semibold px-3 py-1 rounded-full w-fit mx-auto mb-4">
-          OUR Mission
+        <div className="bg-gradient-to-r from-blue-500 to-purple-600 text-white text-xs font-semibold px-4 py-1.5 rounded-full inline-block">
+          OUR MISSION
         </div>
+        <br />
+        <br />
         <h2 className="text-3xl md:text-5xl font-bold mb-6">Our Mission</h2>
         <p className="text-gray-300 max-w-2xl mx-auto mb-16">
           We don't add noise - we sharpen signal.
