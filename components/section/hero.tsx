@@ -1,51 +1,51 @@
-import Link from "next/link";
+// components/Hero.tsx
+import TiltedCard from "./TiltedCard";
+import styles from './Hero.module.css';
 
-export function Hero() {
+interface HeroProps {
+  backgroundImage?: string;
+  overlayOpacity?: number;
+  tiltCardSrc?: string;
+  cardRotationAmplitude?: number;
+}
+
+const Hero = ({
+  backgroundImage = "/images/pattern.jpeg",
+  overlayOpacity = 0.8,
+  tiltCardSrc = "/images/Frame_Hero.png",
+  cardRotationAmplitude = 12,
+}: HeroProps) => {
   return (
     <section
-      className="max-w-7xl mx-auto px-8 md:px-16 py-16 relative transition-all"
-      style={{
-        backgroundImage: 'url("/images/pattern.jpeg")',
-        backgroundSize: "cover",
-        backgroundPosition: "center",
-      }}
+      className={styles.heroSection}
+      style={{ backgroundImage: `url(${backgroundImage})` }}
     >
-      {/* Overlay untuk background image */}
+      {/* Overlay for background image */}
       <div
-        className="absolute inset-0 bg-black opacity-80"
-        style={{ zIndex: -1 }} // Overlay berada di belakang konten hero
+        className={styles.heroOverlay}
+        style={{ opacity: overlayOpacity }}
       ></div>
 
-      {/* Menambahkan gambar dan tombol */}
-      <div className="relative z-10 text-center">
-        <img
-          src="/Images/Frame_Hero.png"
-          alt="Hero Gambar"
-          className="mx-auto"
-          style={{
-            width: "60%",
-            maxWidth: "800px", // Menetapkan lebar maksimum gambar
-          }}
-        />
-
-        {/* Tombol Get Started */}
-        <Link
-          href="#get-started"
-          className="mt-4 inline-block px-6 py-3 text-white font-semibold rounded-full transform transition duration-300 hover:scale-105"
-          style={{
-            position: "absolute",
-            bottom: "40px", // Menyesuaikan posisi tombol
-            left: "50%",
-            transform: "translateX(-50%)",
-            background: "none",
-            border: "2px solid transparent",
-            borderImage: "linear-gradient(to right, #3b82f6, #9333ea) 1", // Gradient border
-            borderRadius: "30px", // Rounded border
-          }}
-        >
-          Get Started
-        </Link>
+      {/* Positioned TiltedCard on top of the image */}
+      <div className={styles.heroCardContainer}>
+        <div className={styles.heroCard}>
+          <TiltedCard
+            imageSrc={tiltCardSrc}
+            altText="Image"
+            containerHeight="100%"
+            containerWidth="100%"
+            imageHeight="100%"
+            imageWidth="100%"
+            rotateAmplitude={cardRotationAmplitude}
+            scaleOnHover={1.2}
+            showMobileWarning={false}
+            showTooltip={true}
+            displayOverlayContent={true}
+          />
+        </div>
       </div>
     </section>
   );
-}
+};
+
+export default Hero;

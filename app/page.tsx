@@ -1,5 +1,5 @@
 import { Navbar } from "@/components/navigation/navbar";
-import { Hero } from "@/components/section/hero";
+import  Hero  from "@/components/section/hero";
 import { Client } from "@/components/section/client";
 import { About } from "@/components/section/about_us";
 import { Case } from "@/components/section/case_study";
